@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+Entity comparador is
+	Port(	w1: in std_logic_vector(5 downto 0);
+			w2: in std_logic_vector(3 downto 0);
+			en: in std_logic;
+			menor,igual: out std_logic);
+end comparador;
+
+Architecture sol of comparador is
+Signal F: std_logic_vector(5 downto 0);
+Begin
+	F<='0'&'0'&w2(3)&w2(2)&w2(1)&w2(0);
+	menor<='1' when w1<F else '0';
+	igual<='1' when w1=F else '0';
+end sol;

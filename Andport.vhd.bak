@@ -1,0 +1,17 @@
+--Library
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+--Entity
+entity Andport is
+		X,Y: in std_logic;
+		S: out std_logic);
+end Andport;
+
+--Architecture
+architecture solve of Andport is
+	-- Signals,Constants,Variables,Components
+	begin
+		S<=X and Y;
+end solve;
